@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Citizen Tech</title>
+
+    <link rel="stylesheet" href="/assets/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        Citizen Tech
+    </header>
+
+    <main>
+
+        <h1>Gerenciamento de serviços</h1>
+
+        <section class="campos">
+
+            <input
+                id="id"
+                type="number"
+                placeholder="ID do serviço"
+            >
+
+            <input
+                id="titulo"
+                placeholder="Título do serviço"
+            >
+
+            <select id="categoria">
+
+                <option>RG</option>
+                <option>CPF</option>
+                <option>CNH</option>
+                <option>Assistência Social</option>
+
+            </select>
+
+            <input
+                id="descricao"
+                placeholder="Descrição"
+            >
+
+            <input
+                id="requisitos"
+                placeholder="Requisitos"
+            >
+
+            <input
+                id="local"
+                placeholder="Local de atendimento"
+            >
+
+            <input
+                id="busca"
+                placeholder="Pesquisar título ou categoria"
+            >
+
+        </section>
+
+        <div class="botoes">
+
+            <button onclick="acao('cadastrar')">
+                Cadastrar serviço
+            </button>
+
+            <button onclick="acao('consultar')">
+                Consultar ID
+            </button>
+
+            <button onclick="acao('listar')">
+                Listar serviços
+            </button>
+
+            <button onclick="acao('titulo')">
+                Buscar título
+            </button>
+
+            <button onclick="acao('categoria')">
+                Buscar categoria
+            </button>
+
+            <button onclick="acao('atualizar')">
+                Atualizar serviço
+            </button>
+
+            <button onclick="acao('excluir')">
+                Excluir serviço
+            </button>
+
+            <button onclick="acao('gerar')">
+                Gerar 5 fictícios
+            </button>
+
+            <button onclick="acao('analisar')">
+                Analisar registros
+            </button>
+
+            <button onclick="acao('limpar')">
+                Limpar lista
+            </button>
+
+        </div>
+
+        <h2>Algoritmos de ordenação por ID</h2>
+
+        <div class="botoes algoritmos">
+
+            <button onclick="acao('bubble')">
+                Bubble Sort
+            </button>
+
+            <button onclick="acao('merge')">
+                Merge Sort
+            </button>
+
+            <button onclick="acao('tree')">
+                Tree Sort
+            </button>
+
+        </div>
+
+        <section id="demo" hidden>
+
+            <h2>Demonstração</h2>
+
+            <p id="etapa"></p>
+
+            <div id="sequencia"></div>
+
+            <p id="metricas"></p>
+
+            <button onclick="passo(-1)">
+                Anterior
+            </button>
+
+            <button onclick="passo(1)">
+                Próximo passo
+            </button>
+
+        </section>
+
+        <section id="saida" aria-live="polite">
+
+            Lista vazia
+
+        </section>
+
+    </main>
+
+    <script src="/assets/script.js"></script>
+
+</body>
+
+</html>

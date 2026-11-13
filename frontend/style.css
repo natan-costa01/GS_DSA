@@ -1,0 +1,121 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #dad7bb;
+    color: #263653;
+}
+
+header {
+    background: #3c6070;
+    color: white;
+    padding: 20px 7%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px 40px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+main > p {
+    text-align: center;
+}
+
+/* Campos e botões */
+
+.campos,
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 18px 0;
+}
+
+input,
+select,
+button {
+    padding: 12px;
+    border-radius: 5px;
+    font: inherit;
+    min-width: 0;
+}
+
+input,
+select {
+    border: 1px solid #3c6070;
+    background: white;
+}
+
+button {
+    border: none;
+    background: #3c6070;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #263653;
+}
+
+.algoritmos button {
+    background: #263653;
+}
+
+.algoritmos button:hover {
+    background: #3c6070;
+}
+
+/* Área de resultados */
+
+#saida,
+#demo {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    overflow-wrap: anywhere;
+}
+
+/* Demonstração dos algoritmos */
+
+#sequencia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#sequencia span {
+    background: #3c6070;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+article {
+    border-bottom: 1px solid #dad7bb;
+    padding: 10px 0;
+    white-space: pre-wrap;
+}
+
+/* Responsividade */
+
+@media (max-width: 650px) {
+
+    .campos,
+    .botoes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
