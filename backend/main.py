@@ -76,7 +76,14 @@ def acao(acao):
 
             return jsonify(analise=g.analisar())
 
-        elif acao in ("bubble", "merge", "tree"):
+        elif acao in (
+            "bubble",
+            "merge",
+            "tree",
+            "selection",
+            "insertion",
+            "quick"
+        ):
 
             registros, metricas, passos = g.ordenar(acao)
 

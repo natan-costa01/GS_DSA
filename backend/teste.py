@@ -6,7 +6,10 @@ from algoritmos.busca import buscar_id
 
 algoritmos = [
     "bubble",
+    "selection",
+    "insertion",
     "merge",
+    "quick",
     "tree"
 ]
 
@@ -15,9 +18,11 @@ casos = [
     [],
     [1],
     [1, 2, 3],
-    [3, 2, 1]
+    [3, 2, 1],
+    [9, 4, 7, 2, 8, 1, 6, 3, 5],
+    [100, 500, 300, 200, 400],
+    [5, 5, 2, 2, 1]
 ]
-
 
 # ==========================================
 # TESTES DE ORDENAÇÃO

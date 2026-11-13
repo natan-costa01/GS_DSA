@@ -210,6 +210,159 @@ def executar(nome, registros):
 
             atual = atual.direita
 
+    # ==========================================
+    # SELECTION SORT
+    # ==========================================
+
+    elif nome == "selection":
+
+        for i in range(len(dados) - 1):
+
+            menor = i
+
+            for j in range(i + 1, len(dados)):
+
+                metricas["comparacoes"] += 1
+
+                if dados[j].id < dados[menor].id:
+
+                    menor = j
+
+                registrar(
+                    f"Menor ID encontrado: {dados[menor].id}",
+                    dados
+                )
+
+            if menor != i:
+
+                a = dados[i].id
+                b = dados[menor].id
+
+                dados[i], dados[menor] = (
+                    dados[menor], dados[i]
+                )
+
+                metricas["trocas"] += 1
+
+                registrar(
+                    f"Troca: {a} e {b}",
+                    dados
+                )
+
+    # ==========================================
+    # INSERTION SORT
+    # ==========================================
+
+    elif nome == "insertion":
+
+        for i in range(1, len(dados)):
+
+            chave = dados[i]
+            j = i - 1
+
+            registrar(
+                f"Elemento selecionado: {chave.id}",
+                dados
+            )
+
+            while j >= 0:
+
+                metricas["comparacoes"] += 1
+
+                if dados[j].id > chave.id:
+
+                    dados[j + 1] = dados[j]
+
+                    metricas["movimentacoes"] += 1
+
+                    j -= 1
+
+                    # Exibe a posição provisória da chave
+                    visual = dados.copy()
+                    visual[j + 1] = chave
+
+                    registrar(
+                        f"Deslocamento para inserir {chave.id}",
+                        visual
+                    )
+
+                else:
+
+                    break
+
+            dados[j + 1] = chave
+
+            metricas["movimentacoes"] += 1
+
+            registrar(
+                f"ID {chave.id} inserido na posição {j + 1}",
+                dados
+            )
+
+    # ==========================================
+    # QUICK SORT
+    # ==========================================
+
+    elif nome == "quick":
+
+        def particionar(inicio, fim):
+
+            pivo = dados[fim].id
+            i = inicio - 1
+
+            registrar(
+                f"Pivô selecionado: {pivo}",
+                dados
+            )
+
+            for j in range(inicio, fim):
+
+                metricas["comparacoes"] += 1
+
+                if dados[j].id <= pivo:
+
+                    i += 1
+
+                    if i != j:
+
+                        dados[i], dados[j] = (
+                            dados[j], dados[i]
+                        )
+
+                        metricas["trocas"] += 1
+
+                        registrar(
+                            f"Troca nas posições {i} e {j}",
+                            dados
+                        )
+
+            if i + 1 != fim:
+
+                dados[i + 1], dados[fim] = (
+                    dados[fim], dados[i + 1]
+                )
+
+                metricas["trocas"] += 1
+
+            registrar(
+                f"Pivô {pivo} na posição correta",
+                dados
+            )
+
+            return i + 1
+
+        def quick_sort(inicio, fim):
+
+            if inicio < fim:
+
+                posicao = particionar(inicio, fim)
+
+                quick_sort(inicio, posicao - 1)
+
+                quick_sort(posicao + 1, fim)
+
+        quick_sort(0, len(dados) - 1)
+
     else:
 
         raise ValueError("Algoritmo inválido")
