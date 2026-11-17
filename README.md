@@ -683,6 +683,36 @@ O projeto reúne conceitos fundamentais da disciplina de Data Structures and Alg
 
 <div align="center">
 
+
+### Evidências visuais dos testes
+
+As imagens a seguir apresentam registros da execução e da demonstração das funcionalidades do Citizen Tech.
+
+#### Testes do sistema
+
+Registro visual dos testes realizados durante a verificação das funcionalidades.
+
+![Testes do Citizen Tech](img/cinco_testes.png)
+
+#### Demonstração dos algoritmos de ordenação
+
+Visualização da execução dos algoritmos, permitindo acompanhar a organização dos identificadores e as etapas de ordenação.
+
+![Algoritmos de ordenação](img/algoritmo_ordenacao.png)
+
+#### Interface do sistema
+
+Apresentação da interface web utilizada para cadastrar, consultar, atualizar, excluir e ordenar os serviços.
+
+![Interface do Citizen Tech](img/sistema.png)
+
+### Demonstração prática
+
+A demonstração completa do projeto será disponibilizada em vídeo, apresentando a execução do sistema, a lista encadeada, as operações de gerenciamento e os algoritmos de ordenação.
+
+**Vídeo de demonstração:** aguardando publicação no YouTube.
+
+
 **CITIZEN TECH**
 
 Global Solution 2026.2
